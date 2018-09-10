@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" http-equiv="refresh" content="0; url=http://kaelen.sorensen.com/2018">
+		<title>Guess the Number</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Guess the Number</h1>
+		<button class="gameButton" onclick="playGame()" >Start the Game</button>
+		<p>
+			<span id="playingGameMode">You are currently playing Beginner Mode (1-10 Inclusive)</span>
+		</p>
+		<!-- source code from: https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp -->
+		<div class="dropdown">
+			<button class="dropbtn">Select Game Mode</button>
+			<div class="dropdown-content">
+				<a onclick="setBeginnerLevel()">Beginner Mode</a>
+				<a onclick="setIntermediateLevel()">Intermediate Mode</a>
+				<a onclick="setHardLevel()">Hard Mode</a>
+			</div>
+		</div>
+		<button class="test" onclick="easterEgg()">Easter egg </button> 
+		<p>
+			<button class="gameRulesButton" onclick="gameText()">Hide/Show Game Challenges </button>
+		</p>
+		<div id="gameText">
+			<div id="challenge1">
+				<table>
+					<tr> 
+						<td>Challenges</td>
+						<td>Completion</td>
+						<td> Click button when completed challenge</td>
+					</tr>
+					<tr>
+						<td>
+							Win Easy Mode
+						</td>
+						<td id="C1">&#10060;</td>
+						<td><button class="gameChallengeButton" onclick="challengeOne()">Cilck Here</button></td>
+					</tr>
+					<tr>
+						<td>
+							Win Medium Mode
+						</td>
+						<td id="C2">&#10060;</td>
+						<td><button class="gameChallengeButton" onclick="challengeTwo()">Cilck Here</button></td>
+					</tr>
+					<tr>
+						<td>
+							Win Hard Mode
+						</td>
+						<td id="C3">&#10060;</td>
+						<td><button class="gameChallengeButton" onclick="challengeThree()">Cilck Here</button></td>
+					</tr>
+					<tr>
+						<td>
+							Win any game mode in one guess
+						</td>
+						<td id="C4">&#10060;</td>
+						<td><button class="gameChallengeButton" onclick="challengeFour()">Cilck Here</button></td>
+					</tr>
+					<tr>
+						<td>
+							Complete the easter egg
+						</td>
+						<td id="C5">&#10060;</td>
+						<td><button  class="gameChallengeButton" onclick="challengeFive()">Cilck Here</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="game.js"></script>
+	</body>
+</html>
